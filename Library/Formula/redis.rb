@@ -7,6 +7,11 @@ class Redis < Formula
 
   head 'https://github.com/antirez/redis.git', :branch => 'unstable'
 
+  devel do
+    url  'http://redis.googlecode.com/files/redis-2.6.0-rc5.tar.gz'
+    sha1 '8051ea9092f238d41966d761b6d80dffc987e37c'
+  end
+
   fails_with :llvm do
     build 2334
     cause 'Fails with "reference out of range from _linenoise"'
